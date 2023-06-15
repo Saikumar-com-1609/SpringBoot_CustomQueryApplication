@@ -21,9 +21,9 @@ public interface BookRepo extends CrudRepository<Book,Integer> {
 	@Transactional
 	Integer updateBookName(@Param("name") String name, @Param("id") Integer id);
 	
-    @Modifying
-    @Query(value = "delete from Book where bookid = :id", nativeQuery = true)
-    @Transactional
-    Integer deleteBookId(@Param("id") Integer id);
+        @Modifying
+        @Query(value = "delete from Book where bookid = :id", nativeQuery = true)
+        @Transactional
+        Integer deleteBookId(@Param("id") Integer id);
 
 }
